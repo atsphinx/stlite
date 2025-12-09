@@ -1,0 +1,20 @@
+<div class="block" id="atsphinx-mini18n-select-component">
+  <style>
+    div#atsphinx-mini18n-select-component div {
+      text-align: center;
+    }
+  </style>
+  <h3 class="subtitle" for="atsphinx-mini18n-select-lang">{{ mini18n.select_lang_label }}</h3>
+  <div class="select">
+    <select name="lang" onchange="{
+                        const values = value.split('@@');
+                        document.cookie = `lang=${values[0]}; path=/; samesite=Strict; max-age=${60*60*24*400};`;
+                        location.href=values[1];
+                        }" id="atsphinx-mini18n-select-lang">
+      {%- for code in mini18n.support_languages %}
+      <option value="{{ code }}@@{{ pathto('../' + code + '/', 1) }}{{ pathto(pagename, 0, '.') }}" {%- if code==language %}
+        selected {%- endif %}>{{ code }}</option>
+      {%- endfor %}
+    </select>
+  </div>
+</div>

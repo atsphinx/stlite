@@ -1,0 +1,46 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Kazuya Takei
+# This file is distributed under the same license as the atsphinx-stlite
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: atsphinx-stlite 0.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-09 18:41+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../_templates/navigation.html:2
+msgid "This Page"
+msgstr ""
+
+#: ../../_templates/navigation.html:5
+msgid "Previous topic"
+msgstr ""
+
+#: ../../_templates/navigation.html:9
+msgid "previous chapter"
+msgstr ""
+
+#: ../../_templates/navigation.html:14
+msgid "Next topic"
+msgstr ""
+
+#: ../../_templates/navigation.html:18
+msgid "next chapter"
+msgstr ""
+
+#: ../../_templates/navigation.html:26
+msgid "Show"
+msgstr ""
+

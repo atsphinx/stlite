@@ -1,0 +1,78 @@
+[project]
+name = "atsphinx-stlite"
+version = "0.0.0"
+description = "Embed Stlite frame into Sphinx documentation."
+authors = [{name = "Kazuya Takei", email = "myself@attakei.net"}]
+license = "Apache-2.0"
+requires-python = ">= 3.10"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Framework :: Sphinx",
+    "Framework :: Sphinx :: Extension",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Documentation",
+    "Topic :: Documentation :: Sphinx",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Documentation",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Text Processing",
+    "Topic :: Text Processing :: Markup",
+    "Topic :: Text Processing :: Markup :: reStructuredText",
+]
+readme = "README.rst"
+dependencies = [
+    "sphinx",
+]
+
+[project.urls]
+Home = "https://github.com/atsphinx/stlite"
+Documentation = "https://atsphinx.github.io/stlite"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    {include-group = "lint"},
+    {include-group = "test"},
+    {include-group = "docs"},
+    "esbonio",
+    "sphinx-autobuild",
+    "sphinx-intl",
+]
+lint = [
+    "doc8",
+    "ruff",
+    "ty",
+]
+test = [
+    "pytest",
+]
+docs = [
+    "atsphinx-bulma",
+    "atsphinx-mini18n",
+    "sphinx-toolbox",
+]
+
+[tool.ruff.lint]
+select = ["C90", "D", "E", "F", "I", "W"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "pep257"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/atsphinx"]
+only-includes = ["src/atsphinx"]

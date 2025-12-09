@@ -1,0 +1,30 @@
+<div class="block" id="sidebar-toc">
+  <h3 class="subtitle">{{ _('This Page') }}</h3>
+  <aside class="menu">
+    {%- if prev %}
+    <p class="menu-label">{{ _('Previous topic') }}</p>
+    <ul class="menu-list">
+      <li>
+        <a href="{{ prev.link|e }}"
+           title="{{ _('previous chapter') }}">{{ prev.title }}</a>
+      </li>
+    </ul>
+    {%- endif %}
+    {%- if next %}
+    <p class="menu-label">{{ _('Next topic') }}</p>
+    <ul class="menu-list">
+      <li>
+        <a href="{{ next.link|e }}"
+           title="{{ _('next chapter') }}">{{ next.title }}</a>
+      </li>
+    </ul>
+    {%- endif %}
+    <p class="menu-label">Source</p>
+    <ul class="menu-list">
+      {%- if show_source and has_source and sourcename %}
+      <li><a href="{{ pathto('_sources/' + sourcename, true)|e }}"
+          rel="nofollow">{{ _('Show') }}</a></li>
+      {% endif %}
+    </ul>
+  </aside>
+</div>

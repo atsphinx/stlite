@@ -111,6 +111,7 @@ dependencies = [
 dev = [
     { name = "atsphinx-bulma" },
     { name = "atsphinx-mini18n" },
+    { name = "beautifulsoup4" },
     { name = "doc8" },
     { name = "esbonio" },
     { name = "pytest" },
@@ -132,6 +133,7 @@ lint = [
     { name = "ty" },
 ]
 test = [
+    { name = "beautifulsoup4" },
     { name = "pytest" },
 ]
 
@@ -142,6 +144,7 @@ requires-dist = [{ name = "sphinx" }]
 dev = [
     { name = "atsphinx-bulma" },
     { name = "atsphinx-mini18n" },
+    { name = "beautifulsoup4", specifier = ">=4.14.3" },
     { name = "doc8" },
     { name = "esbonio" },
     { name = "pytest" },
@@ -161,7 +164,10 @@ lint = [
     { name = "ruff" },
     { name = "ty" },
 ]
-test = [{ name = "pytest" }]
+test = [
+    { name = "beautifulsoup4", specifier = ">=4.14.3" },
+    { name = "pytest" },
+]
 
 [[package]]
 name = "attrs"

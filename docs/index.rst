@@ -28,7 +28,8 @@ atsphinx-stlite
 Show the demo
 =============
 
-Whn you write left-side content into your document,
+When you write left-side content into your document,
+there is right-side content on your website.
 
 .. grid:: 2
 

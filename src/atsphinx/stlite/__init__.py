@@ -2,9 +2,12 @@
 
 from __future__ import annotations
 
+from html import escape
+from pathlib import Path
 from typing import TYPE_CHECKING
 
 from docutils import nodes
+from jinja2 import Template
 from sphinx.util.docutils import SphinxDirective
 
 if TYPE_CHECKING:
@@ -13,13 +16,20 @@ if TYPE_CHECKING:
 
 __version__ = "0.0.0"
 
+__here = Path(__file__).parent
+
+srcdoc_template = Template((__here / "frame.html.jinja").read_text(encoding="utf-8"))
+
 
 class stlite(nodes.Element, nodes.General):  # noqa: D101
     pass
 
 
 def visit_stlite(self: HTML5Translator, node: stlite) -> None:  # noqa: D103
-    self.body.append('<div class="stlite-wrapper"><iframe class="stlite-frame">')
+    srcdoc = escape(srcdoc_template.render(node.attributes))
+    self.body.append(
+        f'<div class="stlite-wrapper"><iframe class="stlite-frame" srcdoc="{srcdoc}">'
+    )
 
 
 def depart_stlite(self: HTML5Translator, node: stlite) -> None:  # noqa: D103

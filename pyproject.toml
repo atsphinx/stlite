@@ -30,6 +30,7 @@ classifiers = [
 ]
 readme = "README.rst"
 dependencies = [
+    "jinja2>=3.1.6",
     "sphinx",
 ]
 

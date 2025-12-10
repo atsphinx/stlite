@@ -13,19 +13,21 @@ path = "src/atsphinx/stlite/__init__.py"
 search = "version = \"{{current_version}}\""
 replace = "version = \"{{new_version}}\""
 
-
 [[files]]
 path = "CHANGES.rst"
 
 search = """
-v{{current_version}}
-={% for _ in current_version %}={% endfor %}
+Recent changelogs
+=================
 """
 replace = """
-v{{new_version}}
-={% for _ in new_version %}={% endfor %}
+Recent changelogs
+=================
 
-:Date: {{ now|date }} (Asia/Tokyo)
+v{{new_version}}
+{{#sameLengthChars}}=@v{{new_version}}{{/sameLengthChars}}
+
+:Date: {{ nowFormat.dateISO }} (Asia/Tokyo)
 
 Breaking changes
 ----------------
@@ -38,11 +40,7 @@ Fixes
 
 Others
 ------
-
-v{{current_version}}
-={% for _ in current_version %}={% endfor %}
 """
-
 
 [[files]]
 path = ".github/release-body.md"
@@ -53,3 +51,9 @@ replace = "Release atsphinx-stlite v{{ new_version }}"
 path = ".github/release-body.md"
 search = "- Changelog is https://github.com/atsphinx/stlite/blob/v{{ current_version }}/CHANGES.rst"
 replace = "- Changelog is https://github.com/atsphinx/stlite/blob/v{{ new_version }}/CHANGES.rst"
+
+[[files]]
+path = ".github/release-body.md"
+regex = true
+search = "- Diff is .+"
+replace = "- Diff is https://github.com/atsphinx/stlite/compare/v{{ current_version }}...v{{ new_version }}/"

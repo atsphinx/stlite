@@ -26,7 +26,8 @@ class stlite(nodes.Element, nodes.General):  # noqa: D101
 
 
 def visit_stlite(self: HTML5Translator, node: stlite) -> None:  # noqa: D103
-    srcdoc = escape(srcdoc_template.render(node.attributes))
+    config = self.builder.config
+    srcdoc = escape(srcdoc_template.render(node.attributes, config=config))
     self.body.append(
         f'<div class="stlite-wrapper"><iframe class="stlite-frame" srcdoc="{srcdoc}">'
     )
@@ -47,6 +48,7 @@ class StliteDirective(SphinxDirective):  # noqa: D101
 
 
 def setup(app: Sphinx):  # noqa: D103
+    app.add_config_value("stlite_default_version", "0.94.0", "env", str)
     app.add_node(stlite, html=(visit_stlite, depart_stlite))
     app.add_directive("stlite", StliteDirective)
     return {

@@ -1,6 +1,6 @@
 [project]
 name = "atsphinx-stlite"
-version = "0.0.0"
+version = "0.1.0"
 description = "Embed Stlite frame into Sphinx documentation."
 authors = [{name = "Kazuya Takei", email = "myself@attakei.net"}]
 license = "Apache-2.0"

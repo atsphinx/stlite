@@ -1,0 +1,10 @@
+body {
+  font-size: 16px !important;
+}
+
+.stlite-frame {
+  /* To fit the parent container */
+  width: 100%;
+  /* To display full of content */
+  height: 40rem;
+}

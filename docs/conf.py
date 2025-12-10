@@ -18,7 +18,9 @@ extensions = [
     # atsphinx extensions
     "atsphinx.bulma.layout.hero",
     "atsphinx.mini18n",
+    "atsphinx.stlite",
     # Third-party extensions
+    "sphinx_design",
     "sphinx_toolbox.confval",
 ]
 templates_path = ["_templates", get_mini18n_template_dir()]
@@ -37,6 +39,7 @@ html_css_files = [
     "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css",
     "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css",
     "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css",
+    "custom.css",
 ]
 html_theme_options = {
     "color_mode": "light",

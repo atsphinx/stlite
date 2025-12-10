@@ -30,6 +30,7 @@ classifiers = [
 ]
 readme = "README.rst"
 dependencies = [
+    "jinja2>=3.1.6",
     "sphinx",
 ]
 
@@ -56,11 +57,13 @@ lint = [
     "ty",
 ]
 test = [
+    "beautifulsoup4>=4.14.3",
     "pytest",
 ]
 docs = [
     "atsphinx-bulma",
     "atsphinx-mini18n",
+    "sphinx-design>=0.6.1",
     "sphinx-toolbox",
 ]
 
@@ -76,3 +79,6 @@ allow-direct-references = true
 [tool.hatch.build.targets.wheel]
 packages = ["src/atsphinx"]
 only-includes = ["src/atsphinx"]
+
+[tool.doc8]
+max-line-length = 119

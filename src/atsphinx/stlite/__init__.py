@@ -19,11 +19,11 @@ class stlite(nodes.Element, nodes.General):  # noqa: D101
 
 
 def visit_stlite(self: HTML5Translator, node: stlite) -> None:  # noqa: D103
-    self.body.append('<iframe class="stlite-widget">')
+    self.body.append('<div class="stlite-wrapper"><iframe class="stlite-frame">')
 
 
 def depart_stlite(self: HTML5Translator, node: stlite) -> None:  # noqa: D103
-    self.body.append("</iframe>")
+    self.body.append("</iframe></div>")
 
 
 class StliteDirective(SphinxDirective):  # noqa: D101

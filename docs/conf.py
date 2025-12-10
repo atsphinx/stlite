@@ -43,7 +43,7 @@ html_css_files = [
 ]
 html_theme_options = {
     "color_mode": "light",
-    "bulmaswatch": "pulse",
+    "bulmaswatch": "simplex",
     "logo_description": "Documentation of atsphinx-stlite.",
     "navbar_icons": [
         {

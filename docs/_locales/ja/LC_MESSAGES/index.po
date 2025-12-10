@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: atsphinx-stlite 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-09 16:19+0900\n"
+"POT-Creation-Date: 2025-12-11 01:31+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -24,15 +24,47 @@ msgstr ""
 msgid "atsphinx-stlite"
 msgstr ""
 
-#: ../../index.rst:6
-msgid "Overview"
+#: ../../index.rst:26
+msgid ""
+"**atsphinx-stlite** is Sphinx extension to embed Stlite contents into "
+"your documentation."
+msgstr "**atsphinx-stlite** はStliteコンテンツをドキュメントに埋め込むためのSphinx拡張です。"
+
+#: ../../index.rst:29
+msgid "Show the demo"
+msgstr "デモを見る"
+
+#: ../../index.rst:31
+msgid ""
+"When you write left-side content into your document, there is right-side "
+"content on your website."
+msgstr ""
+"左側のコンテンツをドキュメントに書くと、右側のコンテンツがウェブサイトに表示されます。"
+
+#: ../../index.rst
+msgid "RST"
 msgstr ""
 
-#: ../../index.rst:8
-msgid "Todo"
+#: ../../index.rst
+msgid "MD"
 msgstr ""
 
-#: ../../index.rst:8
-msgid "Write it"
-msgstr ""
+#: ../../index.rst:108
+msgid "When do you use this?"
+msgstr "これはどんな時に使いますか？"
 
+#: ../../index.rst:110
+msgid "Write description about Streamlit app on Sphinx."
+msgstr "Streamlitアプリの説明をSphinx上に書く時"
+
+#: ../../index.rst:111
+msgid "Write demonstration of presentation using sphinx-revealjs."
+msgstr "sphinx-revealjsを使ったプレゼンテーションでデモをする時"
+
+#: ../../index.rst:114
+msgid "Are you interested in this?"
+msgstr "興味が湧いてきましたか？"
+
+#: ../../index.rst:116
+msgid "Let's got to :doc:`./guide`."
+msgstr ":doc:`./guide` を見てみましょう！"

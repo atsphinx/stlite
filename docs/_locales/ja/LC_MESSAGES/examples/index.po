@@ -20,26 +20,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../../CHANGES.rst:3
-msgid "Changelogs"
-msgstr ""
-
-#: ../../../CHANGES.rst:6
-msgid "v0.0.0"
-msgstr ""
-
-#: ../../../CHANGES.rst
-msgid "date"
-msgstr ""
-
-#: ../../../CHANGES.rst:8
-msgid "2025-12-09 (Asia/Tokyo)"
-msgstr ""
-
-#: ../../../CHANGES.rst:10
-msgid "Initial commit."
-msgstr ""
-
-#~ msgid "Change logs"
-#~ msgstr ""
-
+#: ../../examples/index.rst:2
+msgid "Examples"
+msgstr "事例集"

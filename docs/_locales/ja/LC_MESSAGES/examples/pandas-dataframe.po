@@ -20,26 +20,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../../CHANGES.rst:3
-msgid "Changelogs"
-msgstr ""
+#: ../../examples/pandas-dataframe.rst:2
+msgid "Show table from pandas DataFrame"
+msgstr "pandasのDataFrameからテーブルを表示する"
 
-#: ../../../CHANGES.rst:6
-msgid "v0.0.0"
-msgstr ""
+#: ../../examples/pandas-dataframe.rst:5
+msgid "Code"
+msgstr "コード"
 
-#: ../../../CHANGES.rst
-msgid "date"
-msgstr ""
-
-#: ../../../CHANGES.rst:8
-msgid "2025-12-09 (Asia/Tokyo)"
-msgstr ""
-
-#: ../../../CHANGES.rst:10
-msgid "Initial commit."
-msgstr ""
-
-#~ msgid "Change logs"
-#~ msgstr ""
-
+#: ../../examples/pandas-dataframe.rst:22
+msgid "Application"
+msgstr "アプリ"

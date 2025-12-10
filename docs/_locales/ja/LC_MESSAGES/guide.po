@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: atsphinx-stlite 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-09 16:19+0900\n"
+"POT-Creation-Date: 2025-12-11 01:27+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -22,25 +22,74 @@ msgstr ""
 
 #: ../../guide.rst:3
 msgid "User guide"
-msgstr ""
+msgstr "ユーザーガイド"
 
 #: ../../guide.rst:6
 msgid "Installation"
+msgstr "インストール"
+
+#: ../../guide.rst:8
+msgid ""
+"This is published on PyPI. You can install this by your using package "
+"managers."
+msgstr ""
+"これはPyPIに公開されています。普段使っているパッケージマネージャーを使ってインストールできます。"
+
+#: ../../guide.rst
+msgid "pip"
 msgstr ""
 
-#: ../../guide.rst:8 ../../guide.rst:13 ../../guide.rst:18
-msgid "Todo"
+#: ../../guide.rst
+msgid "uv"
 msgstr ""
 
-#: ../../guide.rst:8 ../../guide.rst:13 ../../guide.rst:18
-msgid "Write it"
-msgstr ""
-
-#: ../../guide.rst:11
+#: ../../guide.rst:26
 msgid "Usage"
-msgstr ""
+msgstr "使用方法"
 
-#: ../../guide.rst:16
+#: ../../guide.rst:29
+msgid "1. Register as extension"
+msgstr "1. 拡張を登録する"
+
+#: ../../guide.rst:31
+msgid "Append this into ``extensions`` of your ``conf.py``:"
+msgstr "あなたのドキュメントにある ``conf.py`` の ``extensions`` に、拡張を追加してください。"
+
+#: ../../guide.rst:43
+msgid "2. Write Stlite contents"
+msgstr "2. Stlite コンテンツを記述する"
+
+#: ../../guide.rst:45
+msgid "Write your Stlite app code into document using ``stlite`` directive."
+msgstr "ドキュメント上に ``stlite`` ディレクティブを使って、Stliteアプリのコードを記述してください。"
+
+#: ../../guide.rst:63
+msgid "3. Build as HTML"
+msgstr "3. HTMLとしてビルドする"
+
+#: ../../guide.rst:65
+msgid ""
+"When you build by HTML-based builder, there are applications of Stlite on"
+" your documents."
+msgstr ""
+"HTML系のビルダーでドキュメントをビルドすると、ビルドしたページ上にStliteアプリが表示されます。"
+
+#: ../../guide.rst:67
+msgid "Please see \":doc:`./examples/pandas-dataframe`\" to know build result."
+msgstr "この例をビルドした際の結果は、\":doc:`./examples/pandas-dataframe`\" を確認してください。"
+
+#: ../../guide.rst:70
 msgid "Configuration"
+msgstr "設定"
+
+#: ../../guide.rst:72
+msgid "There are some configuration values for this extension."
+msgstr "この拡張のための設定項目がいくつか提供されています。"
+
+#: ../../guide.rst
+msgid "**Type:** str"
 msgstr ""
 
+#: ../../guide.rst
+msgid "**Default:** \"latest\""
+msgstr ""

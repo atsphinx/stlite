@@ -63,6 +63,7 @@ test = [
 docs = [
     "atsphinx-bulma",
     "atsphinx-mini18n",
+    "sphinx-design>=0.6.1",
     "sphinx-toolbox",
 ]
 
@@ -78,3 +79,6 @@ allow-direct-references = true
 [tool.hatch.build.targets.wheel]
 packages = ["src/atsphinx"]
 only-includes = ["src/atsphinx"]
+
+[tool.doc8]
+max-line-length = 119

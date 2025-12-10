@@ -69,4 +69,12 @@ Please see ":doc:`./examples/pandas-dataframe`" to know build result.
 Configuration
 =============
 
-.. todo:: Write it
+There are some configuration values for this extension.
+
+.. confval:: stlite_default_version
+   :type: str
+   :default: "latest"
+
+   Using version of Stlite from CDN.
+
+   If you want to lock version of Stlite, set this value.

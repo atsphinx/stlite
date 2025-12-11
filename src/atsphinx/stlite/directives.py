@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import itertools
 import json
 from typing import TYPE_CHECKING
 
@@ -30,13 +31,23 @@ def parsed_dict(argument: str | None) -> dict | None:
         raise ValueError(f"Invalid value neigher JSON nor TOML: {argument}") from e
 
 
+def list_of_str(argument: str | None) -> list[str] | None:
+    """Check if the argument is a valid list of strings."""
+    if not argument:
+        return None
+    values = [value.split(",") for value in argument.split("\n") if value.strip()]
+    return [v.strip() for v in itertools.chain.from_iterable(values) if v]
+
+
 class StliteDirective(SphinxDirective):  # noqa: D101
     has_content = True
     option_spec = {
         "config": parsed_dict,
+        "requirements": list_of_str,
     }
     DEFAULT_OPTIONS = {
         "config": None,
+        "requirements": [],
     }
 
     def run(self):  # noqa: D102

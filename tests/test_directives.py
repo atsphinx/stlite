@@ -67,3 +67,36 @@ def test__parse_config(app: SphinxTestApp, source: str):
     doctree = restructuredtext.parse(app, dedent(source).strip())
     node = pick_first_stlite(doctree)
     assert node["config"] == {"client": {"toolbarMode": "viewer"}}
+
+
+@pytest.mark.sphinx(confoverrides={"extensions": ["atsphinx.stlite"]})
+@pytest.mark.parametrize(
+    ["source"],
+    [
+        pytest.param(
+            """
+    .. stlite::
+       :requirements: matplotlib, polars
+
+       print("Hello world")
+    """,
+            id="comma-splitted",
+        ),
+        pytest.param(
+            """
+    .. stlite::
+       :requirements:
+         matplotlib
+         polars
+
+       print("Hello world")
+    """,
+            id="multiline",
+        ),
+    ],
+)
+def test__parse_requirements(app: SphinxTestApp, source: str):
+    """Test to pass."""
+    doctree = restructuredtext.parse(app, dedent(source).strip())
+    node = pick_first_stlite(doctree)
+    assert node["requirements"] == ["matplotlib", "polars"]

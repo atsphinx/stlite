@@ -26,7 +26,7 @@ class stlite(nodes.Element, nodes.General):  # noqa: D101
 
 def visit_stlite(self: HTML5Translator, node: stlite) -> None:  # noqa: D103
     config = self.builder.config
-    srcdoc = escape(srcdoc_template.render(node.attributes, config=config))
+    srcdoc = escape(srcdoc_template.render(app=node.attributes, config=config))
     self.body.append(
         f'<div class="stlite-wrapper"><iframe class="stlite-frame" srcdoc="{srcdoc}">'
     )

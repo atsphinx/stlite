@@ -35,10 +35,13 @@ class StliteDirective(SphinxDirective):  # noqa: D101
     option_spec = {
         "config": parsed_dict,
     }
+    DEFAULT_OPTIONS = {
+        "config": None,
+    }
 
     def run(self):  # noqa: D102
         node = nodes.stlite()
-        node.attributes |= {"config": None}
+        node.attributes |= self.DEFAULT_OPTIONS
         node.attributes |= self.options
         if self.content:
             node["code"] = "\n".join(self.content)

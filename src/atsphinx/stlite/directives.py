@@ -38,10 +38,8 @@ class StliteDirective(SphinxDirective):  # noqa: D101
 
     def run(self):  # noqa: D102
         node = nodes.stlite()
-        print(node.attributes, self.options)
         node.attributes |= {"config": None}
         node.attributes |= self.options
-        print(node.attributes, self.options)
         if self.content:
             node["code"] = "\n".join(self.content)
         return [node]

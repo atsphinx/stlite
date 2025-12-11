@@ -42,7 +42,7 @@ Append this into ``extensions`` of your ``conf.py``:
 2. Write Stlite contents
 ------------------------
 
-Write your Stlite app code into document using ``stlite`` directive.
+Write your Stlite app code into document using :rst:dir:`stlite` directive.
 
 .. code-block:: rst
 
@@ -65,6 +65,29 @@ Write your Stlite app code into document using ``stlite`` directive.
 When you build by HTML-based builder, there are applications of Stlite on your documents.
 
 Please see ":doc:`./examples/pandas-dataframe`" to know build result.
+
+Directives
+==========
+
+There is ``stlite`` directive to write Stlite app code into document.
+
+.. rst:directive:: stlite
+
+   Streamlit application block.
+
+   You must write application code into content block.
+
+   .. rst:directive:option:: config
+
+      Configuration values for Streamlit.
+
+      This supports JSON or TOML format.
+
+   .. rst:directive:option:: requirements
+
+      List of third-party project names required to run application.
+
+      This supports multiline strings, comma-separated strings, or combinations.
 
 Configuration
 =============

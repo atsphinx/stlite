@@ -34,6 +34,12 @@ This is example to display table from pandas DataFrame.
 If you want to know how does it display,
 go to `demo page of document <https://atsphinx.github.io/stlite/en/examples/pandas-dataframe/>`_.
 
+You can also set external python file.
+
+.. code:: rst
+
+   .. stlite:: example.py
+
 Usage
 =====
 

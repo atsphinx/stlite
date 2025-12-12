@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import itertools
 import json
+from pathlib import Path
 from typing import TYPE_CHECKING
 
 from sphinx.util import logging
@@ -40,6 +41,7 @@ def list_of_str(argument: str | None) -> list[str] | None:
 
 
 class StliteDirective(SphinxDirective):  # noqa: D101
+    optional_arguments = 1
     has_content = True
     option_spec = {
         "config": parsed_dict,
@@ -54,7 +56,13 @@ class StliteDirective(SphinxDirective):  # noqa: D101
         node = nodes.stlite()
         node.attributes |= self.DEFAULT_OPTIONS
         node.attributes |= self.options
-        if self.content:
+        if self.arguments:
+            source_path = self.state.document["source"]
+            app_file = Path(source_path).parent / self.arguments[0]
+            if not app_file.exists():
+                raise ValueError(f"File not found: {app_file}")
+            node["code"] = app_file.read_text()
+        elif self.content:
             node["code"] = "\n".join(self.content)
         return [node]
 

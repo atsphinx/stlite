@@ -71,11 +71,14 @@ Directives
 
 There is ``stlite`` directive to write Stlite app code into document.
 
-.. rst:directive:: stlite
+.. rst:directive:: .. stlite:: source-file
 
    Streamlit application block.
 
-   You must write application code into content block.
+   You must use either action to set application code.
+
+   * Set Python code file path relative from document into argument.
+   * Write Python script into content block.
 
    .. rst:directive:option:: config
 

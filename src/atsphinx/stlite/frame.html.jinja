@@ -19,7 +19,21 @@
   </head>
   <body>
     <streamlit-app>
-{{ code }}
+      <app-file name="streamlit_app.py" entrypoint>
+{{ app.code }}
+      </app-file>
+      {%- if app.config %}
+      <app-file name=".streamlit/config.json">
+        {{ app.config|tojson }}
+      </app-file>
+      {%- endif %}
+      {%- if app.requirements %}
+      <app-requirements>
+        {% for req in app.requirements %}
+        {{ req }}
+        {% endfor %}
+      </app-requirements>
+      {%- endif %}
     </streamlit-app>
   </body>
 </html>

@@ -25,4 +25,5 @@ pre-commit:
       glob: '*.py'
       exclude:
         - '**/conf.py'
+        - 'docs/**/*.py'
       run: '{run_python} ty check {staged_files}'

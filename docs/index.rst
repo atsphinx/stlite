@@ -7,6 +7,7 @@ atsphinx-stlite
    :hidden:
 
    guide
+   examples/index
    changes
 
 .. raw:: html

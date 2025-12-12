@@ -11,7 +11,7 @@ from . import directives, nodes
 if TYPE_CHECKING:
     from sphinx.application import Sphinx
 
-__version__ = "0.2.0"
+__version__ = "0.2.1"
 
 logger = logging.getLogger(__name__)
 

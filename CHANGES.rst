@@ -2,6 +2,22 @@
 Recent changelogs
 =================
 
+v0.2.1
+======
+
+:Date: 2025-12-13 (Asia/Tokyo)
+
+Fixes
+-----
+
+* Correct version variable
+
+Others
+------
+
+* Update readme to show details.
+* Fix age settings to handle version variable correctly.
+
 v0.2.0
 ======
 

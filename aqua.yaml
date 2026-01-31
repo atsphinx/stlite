@@ -9,7 +9,7 @@
 #   - all
 registries:
 - type: standard
-  ref: v4.463.0 # renovate: depName=aquaproj/aqua-registry
+  ref: v4.464.0 # renovate: depName=aquaproj/aqua-registry
 packages:
 - name: astral-sh/uv@0.9.28
 - name: go-task/task@v3.47.0

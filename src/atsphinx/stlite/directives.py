@@ -46,10 +46,12 @@ class StliteDirective(SphinxDirective):  # noqa: D101
     option_spec = {
         "config": parsed_dict,
         "requirements": list_of_str,
+        "height": str,
     }
     DEFAULT_OPTIONS = {
         "config": None,
         "requirements": [],
+        "height": None,
     }
 
     def run(self):  # noqa: D102

@@ -13,5 +13,5 @@ registries:
 packages:
 - name: astral-sh/uv@0.11.6
 - name: go-task/task@v3.49.1
-- name: evilmartians/lefthook@v2.1.4
+- name: evilmartians/lefthook@v2.1.5
 - name: biomejs/biome@cli/v1.9.4

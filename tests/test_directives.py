@@ -109,6 +109,49 @@ def test__parse_requirements(app: SphinxTestApp, source: str):
         pytest.param(
             """
     .. stlite::
+       :width: 500px
+
+       print("Hello world")
+    """,
+            "500px",
+            id="with-unit",
+        ),
+        pytest.param(
+            """
+    .. stlite::
+       :width: 30rem
+
+       print("Hello world")
+    """,
+            "30rem",
+            id="rem-unit",
+        ),
+        pytest.param(
+            """
+    .. stlite::
+       :width: 600
+
+       print("Hello world")
+    """,
+            "600",
+            id="numeric-only",
+        ),
+    ],
+)
+def test__parse_width(app: SphinxTestApp, source: str, expected: str):
+    """Test width option parsing."""
+    doctree = restructuredtext.parse(app, dedent(source).strip())
+    node = pick_first_stlite(doctree)
+    assert node["width"] == expected
+
+
+@pytest.mark.sphinx(confoverrides={"extensions": ["atsphinx.stlite"]})
+@pytest.mark.parametrize(
+    ["source", "expected"],
+    [
+        pytest.param(
+            """
+    .. stlite::
        :height: 500px
 
        print("Hello world")
@@ -143,4 +186,3 @@ def test__parse_height(app: SphinxTestApp, source: str, expected: str):
     doctree = restructuredtext.parse(app, dedent(source).strip())
     node = pick_first_stlite(doctree)
     assert node["height"] == expected
-

@@ -92,6 +92,22 @@ There is ``stlite`` directive to write Stlite app code into document.
 
       This supports multiline strings, comma-separated strings, or combinations.
 
+   .. rst:directive:option:: width
+
+      Width of the stlite iframe.
+
+      Accepts values with units (e.g., ``500px``, ``30rem``) or numeric values (treated as pixels).
+
+      Example:
+
+      .. code-block:: rst
+
+         .. stlite::
+            :width: 800px
+
+            import streamlit as st
+            st.title("Custom Height Example")
+
    .. rst:directive:option:: height
 
       Height of the stlite iframe.

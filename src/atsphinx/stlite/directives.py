@@ -47,11 +47,13 @@ class StliteDirective(SphinxDirective):  # noqa: D101
     option_spec = {
         "config": parsed_dict,
         "requirements": list_of_str,
+        "width": directives.unchanged,
         "height": directives.unchanged,
     }
     DEFAULT_OPTIONS = {
         "config": None,
         "requirements": [],
+        "width": None,
         "height": None,
     }
 

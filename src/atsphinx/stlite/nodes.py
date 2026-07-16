@@ -27,16 +27,22 @@ class stlite(nodes.Element, nodes.General):  # noqa: D101
 def visit_stlite(self: HTML5Translator, node: stlite) -> None:  # noqa: D103
     config = self.builder.config
     srcdoc = escape(srcdoc_template.render(app=node.attributes, config=config))
-    
+
     # Apply custom height if specified
     style_attr = ""
+    if node.attributes.get("width"):
+        width = node.attributes["width"]
+        # Ensure px suffix if numeric value without unit
+        if width.isdigit():
+            width = f"{width}px"
+        style_attr = f' style="width: {escape(width)};"'
     if node.attributes.get("height"):
         height = node.attributes["height"]
         # Ensure px suffix if numeric value without unit
         if height.isdigit():
             height = f"{height}px"
         style_attr = f' style="height: {escape(height)};"'
-    
+
     self.body.append(
         f'<div class="stlite-wrapper"><iframe class="stlite-frame"{style_attr} srcdoc="{srcdoc}">'
     )

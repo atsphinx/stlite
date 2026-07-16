@@ -1,20 +1,13 @@
 Plot histogram chart
 ====================
 
-.. raw:: html
-
-   <style>
-     .stlite-frame {
-       height: 800px;
-     }
-   </style>
-
 Code
 ----
 
 .. code-block:: rst
 
    .. stlite::
+      :width: 800
       :config:
         [client]
         toolbarMode = "viewer"
@@ -36,6 +29,7 @@ Application
 
 
 .. stlite::
+   :width: 800
    :config:
      [client]
      toolbarMode = "viewer"

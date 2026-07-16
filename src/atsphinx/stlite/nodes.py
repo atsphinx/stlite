@@ -44,7 +44,7 @@ def visit_stlite(self: HTML5Translator, node: stlite) -> None:  # noqa: D103
         style_attr = f' style="height: {escape(height)};"'
 
     self.body.append(
-        f'<div class="stlite-wrapper"><iframe class="stlite-frame"{style_attr} srcdoc="{srcdoc}">'
+        f'<div class="stlite-wrapper"><iframe class="stlite-frame"{style_attr} srcdoc="{srcdoc}">'  # noqa: E501
     )
 
 

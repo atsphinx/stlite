@@ -2,6 +2,23 @@
 Recent changelogs
 =================
 
+v0.3.0
+======
+
+:Date: 2026-07-17 (Asia/Tokyo)
+
+Features
+--------
+
+* ``stlite`` directive accepts ``width`` and ``height`` options to customize the frame size. [ `#38`_ ]
+
+Fixes
+-----
+
+* Keep ``None`` when a directive option value is not specified. [ `#38`_ ]
+
+.. _#38: https://github.com/atsphinx/stlite/pull/38
+
 v0.2.1
 ======
 
